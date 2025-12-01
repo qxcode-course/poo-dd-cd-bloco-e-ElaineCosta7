@@ -2,8 +2,13 @@
     "patches": [
         {
             "label": "2025-12-01_18-58-36",
-            "content": "",
+            "content": "@@ -1,190 +0,0 @@\n-%0Aimport abc%0Aclass Animal(abc.ABC): #abs%0A    def __init__(self, nome: str):%0A        self.__nome: str = nome%0A%0A    def apresentar_nome(self):%0A        print(f%22Eu sou um(a) %7Bself.__nome%7D!%22)%0A%0A    \n",
             "lines": "0"
+        },
+        {
+            "label": "2025-12-01_19-34-41",
+            "content": "\nimport abc\nclass Animal(abc.ABC): #abs\n    def __init__(self, nome: str):\n        self.__nome: str = nome\n\n    def apresentar_nome(self):\n        print(f\"Eu sou um(a) {self.__nome}!\")\n\n    ",
+            "lines": "10"
         }
     ]
 }

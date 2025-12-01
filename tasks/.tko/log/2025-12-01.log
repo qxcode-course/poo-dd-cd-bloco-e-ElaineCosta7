@@ -2,3 +2,12 @@
 2025-12-01 18:58:36, MOVE, v:1, k:poo@zoo, mode:PICK
 2025-12-01 18:58:36, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100, size:0
 2025-12-01 18:58:48, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-01 19:06:52, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-01 19:07:33, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-01 19:07:34, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-01 19:07:35, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-01 19:07:37, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-01 19:07:40, EXEC, v:1, k:poo@zoo, mode:FREE
+2025-12-01 19:34:34, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-01 19:34:38, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-01 19:34:41, EXEC, v:1, k:poo@zoo, mode:FREE, size:10
