@@ -1,14 +1,20 @@
+#from typing import Any
+from abc import ABC, abstractmethod
 
-import abc
-class Animal(abc.ABC): #abs
+class Animal(ABC):
     def __init__(self, nome: str):
         self.__nome: str = nome
 
     def apresentar_nome(self):
         print(f"Eu sou um(a) {self.__nome}!")
 
-    #fazer_som()#abs
-    #mover()#abs
+    @abstractmethod
+    def fazer_som(self) -> None:
+        pass
+
+    @abstractmethod
+    def mover(self) -> None:
+        pass
 
 class Leao(Animal):
     def __init__(self, nome: str):
@@ -35,7 +41,14 @@ class Cobra(Animal):
         super().__init__(nome)
 
     def fazer_som(self):
-        print("shhhhhhhhh")
+        print("ssssssssssssss")
 
     def mover(self):
-        print("rasteja")
+        print("rastejado fatal")
+
+animais: list[Animal] = [Leao("Leão"), Elefante("Elefante"), Cobra("Cobra")]
+for animal in animais:
+    animal.apresentar_nome()
+    animal.fazer_som()
+    animal.mover()
+    print()

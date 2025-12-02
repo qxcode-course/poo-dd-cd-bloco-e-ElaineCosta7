@@ -1,0 +1,31 @@
+2025-12-02 02:39:04, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-02 02:39:06, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-02 02:39:09, MOVE, v:1, k:poo@cadastro, mode:DOWN
+2025-12-02 02:39:10, MOVE, v:1, k:poo@cadastro, mode:PICK
+2025-12-02 02:39:10, EXEC, v:1, k:poo@cadastro, mode:FULL, rate:0, size:0
+2025-12-02 02:39:11, MOVE, v:1, k:poo@cadastro, mode:BACK
+2025-12-02 02:39:16, MOVE, v:1, k:poo@zoo, mode:PICK
+2025-12-02 02:39:17, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100, size:41
+2025-12-02 02:39:19, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 02:58:19, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:55
+2025-12-02 02:58:19, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:55
+2025-12-02 02:58:36, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:55
+2025-12-02 02:58:49, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:55
+2025-12-02 02:59:04, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:55
+2025-12-02 02:59:18, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:55
+2025-12-02 02:59:27, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100, size:55
+2025-12-02 02:59:30, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 02:59:31, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 03:00:18, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 03:00:19, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 03:00:19, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 03:00:19, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100
+2025-12-02 03:00:30, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:56
+2025-12-02 03:01:49, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:100, size:55
+2025-12-02 03:04:51, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:58
+2025-12-02 03:05:11, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:58
+2025-12-02 03:05:17, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:58
+2025-12-02 03:05:33, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0, size:54
+2025-12-02 03:05:50, EXEC, v:1, k:poo@zoo, mode:LOCK, rate:0
+2025-12-02 03:05:50, MOVE, v:1, k:poo@zoo, mode:BACK
+2025-12-02 03:06:50, SELF, v:1, k:poo@zoo, rate:100, human:amigos, guide:aula, alone:7, study:90
