@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2025-12-02_18-44-14",
+            "content": "@@ -1,303 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Pagamento(ABC):%0A    def __init__(self, valor: float, descri%C3%A7%C3%A3o: str):%0A        self.__valor: float = valor%0A        self.__descri%C3%A7%C3%A3o: str = descri%C3%A7%C3%A3o%0A%0A    def resumo(self):%0A        print(f%22Pagamento de R$ %3Cvalor%3E: %3Cdescricao%3E%22)%0A    %0A    def validar_valor(self):%0A\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-02_19-14-24",
+            "content": "@@ -87,34 +87,34 @@\n r: float, descri\n-ca\n+%C3%A7%C3%A3\n o: str):%0A       \n@@ -115,24 +115,26 @@\n        self.\n+__\n valor: float\n@@ -155,25 +155,32 @@\n    self.\n+__\n descri\n-cao\n+%C3%A7%C3%A3o: str\n  = descr\n@@ -184,16 +184,12 @@\n scri\n-cao%0A    \n+%C3%A7%C3%A3o%0A\n %0A   \n@@ -209,15 +209,8 @@\n elf)\n- -%3E str\n :%0A  \n@@ -215,23 +215,22 @@\n         \n-return \n+print(\n f%22Pagame\n@@ -243,1225 +243,61 @@\n  R$ \n-%7Bself.valor%7D: %7Bself.descricao%7D%22%0A    %0A    def validar_valor(self) -%3E None:%0A        if self.valor %3C= 0:%0A            raise ValueError(%22falhou: valor invalido%22)%0A    %0A    @abstractmethod%0A    def processar(self):%0A        pass%0A    %0Aclass CartaoCredito(Pagamento): #acoplamento forte%0A    def __init__(self, num: int, nome: str, limite: float, valor: float, descricao: str):%0A        super().__init__(valor, descricao)%0A        self.num = num%0A        self.nome = nome%0A        self.limite: float = limite%0A%0A    def resumo(self):%0A        return %22Cartao de Credito: %22 + super().resumo()%0A%0A    def get_limite(self):%0A        return self.limite%0A%0A    def processar(self):%0A        if self.valor %3E self.limite:%0A            print(%22pagamento recusado por limite insuficiente\n+%3Cvalor%3E: %3Cdescricao%3E\n %22)%0A    \n-  \n-      return%0A        self.limite -= self.valor%0A%0A%0Adef processar_pagamentos(pagamentos: list%5BPagamento%5D):%0A    for pag in pagamentos:%0A        pag.validar_valor()%0A        print(pag.resumo())%0A        pag.processar()%0A        if isinstance(pag, CartaoCredito):%0A            print(pag.get_limite())%0A%0Apag: Pagamento = CartaoCredito(nome= %22David%22, descricao=%22Coxinha%22, limite=500.00, num=123, valor=0.50)%0Apagamentos: list%5BPagamento%5D = %5Bpag%5D%0Aprocessar_pagamentos(pagamentos)\n+%0A    def validar_valor(self):%0A\n",
+            "lines": "11"
+        },
+        {
+            "label": "2025-12-02_19-32-18",
+            "content": "@@ -162,21 +162,16 @@\n escricao\n-: str\n  = descr\n@@ -667,21 +667,16 @@\n self.num\n-: int\n  = num%0A \n@@ -691,21 +691,16 @@\n elf.nome\n-: str\n  = nome%0A\n@@ -1053,47 +1053,8 @@\n or%0A%0A\n-class Pix(Pagamento):%0A    def __init__%0A\n %0Adef\n",
+            "lines": "49"
+        },
+        {
+            "label": "2025-12-02_19-33-46",
+            "content": "@@ -1106,434 +1106,8 @@\n it__\n-(self, valor: float, descricao: str, chave: str, banco: str):%0A        super().__init__(valor, descricao)%0A        self.__chave: str = chave%0A        self.__banco: str = banco%0A%0Aclass Boleto(Pagamento):%0A    def __init__(self, valor: float, descricao: str, codigo_barras: int, vencimento: str):%0A        super().__init__(valor, descricao)%0A        self.__codigo_barras: int = codigo_barras%0A        self.__vencimento: str = vencimento\n %0A%0Ade\n",
+            "lines": "51"
+        },
+        {
+            "label": "2025-12-02_19-39-29",
+            "content": "@@ -1280,75 +1280,8 @@\n co%0A%0A\n-    def processar(self):%0A        if valor:%0A            self.valor%0A%0A\n clas\n@@ -1534,34 +1534,8 @@\n to%0A%0A\n-    def processar(self):%0A%0A\n def \n",
+            "lines": "60"
+        },
+        {
+            "label": "2025-12-02_19-56-11",
+            "content": "@@ -0,0 +1,2043 @@\n+from abc import ABC, abstractmethod%0A%0Aclass Pagamento(ABC):%0A    def __init__(self, valor: float, descricao: str):%0A        self.valor: float = valor%0A        self.descricao: str = descricao%0A    %0A    def resumo(self) -%3E str:%0A        return f%22Pagamento de R$ %7Bself.valor%7D: %7Bself.descricao%7D%22%0A    %0A    def validar_valor(self) -%3E None:%0A        if self.valor %3C= 0:%0A            raise ValueError(%22falhou: valor invalido%22)%0A    %0A    @abstractmethod%0A    def processar(self):%0A        pass%0A    %0Aclass CartaoCredito(Pagamento): #acoplamento forte%0A    def __init__(self, num: int, nome: str, limite: float, valor: float, descricao: str):%0A        super().__init__(valor, descricao)%0A        self.num: int = num%0A        self.nome: str = nome%0A        self.limite: float = limite%0A%0A    def resumo(self):%0A        return %22Cartao de Credito: %22 + super().resumo()%0A%0A    def get_limite(self):%0A        return self.limite%0A%0A    def processar(self):%0A        if self.valor %3E self.limite:%0A            print(%22pagamento recusado por limite insuficiente%22)%0A            return%0A        self.limite -= self.valor%0A%0Aclass Pix(Pagamento):%0A    def __init__(self, valor: float, descricao: str, chave: str, banco: str):%0A        super().__init__(valor, descricao)%0A        self.__chave: str = chave%0A        self.__banco: str = banco%0A%0A    def processar(self):%0A        if valor:%0A            self.valor%0A%0Aclass Boleto(Pagamento):%0A    def __init__(self, valor: float, descricao: str, codigo_barras: int, vencimento: str):%0A        super().__init__(valor, descricao)%0A        self.__codigo_barras: int = codigo_barras%0A        self.__vencimento: str = vencimento%0A%0A    def processar(self):%0A%0Adef processar_pagamentos(pagamentos: list%5BPagamento%5D):%0A    for pag in pagamentos:%0A        pag.validar_valor()%0A        print(pag.resumo())%0A        pag.processar()%0A        if isinstance(pag, CartaoCredito):%0A            print(pag.get_limite())%0A%0Apag: Pagamento = CartaoCredito(nome= %22David%22, descricao=%22Coxinha%22, limite=500.00, num=123, valor=0.50)%0Apagamentos: list%5BPagamento%5D = %5Bpag%5D%0Aprocessar_pagamentos(pagamentos)\n",
+            "lines": "66"
+        },
+        {
+            "label": "2025-12-09_01-19-30",
+            "content": "@@ -1,186 +0,0 @@\n-from abc import ABC, abstractmethod%0A%0Aclass Pagamento(ABC):%0A    def __init__(self, valor: float, descricao: str):%0A        self.valor: float = valor%0A        self.descricao: str = descricao\n",
+            "lines": "0"
+        },
+        {
+            "label": "2025-12-09_01-19-44",
+            "content": "@@ -183,298 +183,4 @@\n icao\n-%0A%0A          def resumo(self) -%3E str:%0A        return f%22Pagamento de R$ %7Bself.valor%7D: %7Bself.descricao%7D%22%0A    %0A    def validar_valor(self) -%3E None:%0A        if self.valor %3C= 0:%0A            raise ValueError(%22falhou: valor invalido%22)%0A    %0A    @abstractmethod%0A    def processar(self):%0A        pass%0A    \n",
+            "lines": "6"
+        },
+        {
+            "label": "2025-12-09_01-32-02",
+            "content": "@@ -181,16 +181,22 @@\n cricao%0A%0A\n+      \n     def \n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-09_01-32-21",
+            "content": "@@ -408,13 +408,67 @@\n     %0A   \n+ @abstractmethod%0A    def processar(self):%0A        pass\n %0A    \n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-09_01-32-38",
+            "content": "@@ -412,62 +412,8 @@\n %0A   \n- @abstractmethod%0A    def processar(self):%0A        pass\n %0A   \n",
+            "lines": "16"
+        },
+        {
+            "label": "2025-12-09_01-32-42",
+            "content": "@@ -471,361 +471,4 @@\n     \n-%0Aclass CartaoCredito(Pagamento): #acoplamento forte%0A    def __init__(self, num: int, nome: str, limite: float, valor: float, descricao: str):%0A        super().__init__(valor, descricao)%0A        self.num: int = num%0A        self.nome: str = nome%0A        self.limite: float = limite%0A%0A    def resumo(self):%0A        return %22Cartao de Credito: %22 + super().resumo()\n",
+            "lines": "18"
+        },
+        {
+            "label": "2025-12-09_01-48-27",
+            "content": "@@ -828,242 +828,4 @@\n mo()\n-%0A    %0A    def get_limite(self):%0A        return self.limite%0A%0A    def processar(self):%0A        if self.valor %3E self.limite:%0A            print(%22pagamento recusado por limite insuficiente%22)%0A            return%0A        self.limite -= self.valor\n",
+            "lines": "27"
+        },
+        {
+            "label": "2025-12-09_02-00-26",
+            "content": "@@ -1066,423 +1066,4 @@\n alor\n-%0A%0A    def processar_pagamentos(pagamentos: list%5BPagamento%5D):%0A    for pag in pagamentos:%0A        pag.validar_valor()%0A        print(pag.resumo())%0A        pag.processar()%0A        if isinstance(pag, CartaoCredito):%0A            print(pag.get_limite())%0A%0Apag: Pagamento = CartaoCredito(nome= %22David%22, descricao=%22Coxinha%22, limite=500.00, num=123, valor=0.50)%0Apagamentos: list%5BPagamento%5D = %5Bpag%5D%0Aprocessar_pagamentos(pagamentos)\n",
+            "lines": "36"
+        },
+        {
+            "label": "2025-12-09_02-06-18",
+            "content": "@@ -1064,16 +1064,20 @@\n .valor%0A%0A\n+    \n def proc\n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-09_02-06-32",
+            "content": "@@ -1064,20 +1064,16 @@\n .valor%0A%0A\n-    \n def proc\n@@ -1119,20 +1119,16 @@\n ento%5D):%0A\n-    \n     for \n@@ -1146,20 +1146,16 @@\n mentos:%0A\n-    \n         \n@@ -1174,36 +1174,32 @@\n valor()%0A        \n-    \n print(pag.resumo\n@@ -1202,24 +1202,16 @@\n sumo())%0A\n-        \n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-09_02-06-57",
+            "content": "@@ -1064,16 +1064,20 @@\n .valor%0A%0A\n+    \n def proc\n@@ -1123,16 +1123,20 @@\n ento%5D):%0A\n+    \n     for \n@@ -1158,24 +1158,28 @@\n os:%0A        \n+    \n pag.validar_\n@@ -1182,24 +1182,28 @@\n dar_valor()%0A\n+    \n         prin\n@@ -1218,16 +1218,24 @@\n sumo())%0A\n+        \n         \n@@ -1246,24 +1246,28 @@\n processar()%0A\n+    \n     if isins\n@@ -1293,16 +1293,20 @@\n edito):%0A\n+    \n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-09_02-08-15",
+            "content": "@@ -180,21 +180,17 @@\n scricao%0A\n-    \n %0A\n+\n     def \n@@ -825,17 +825,21 @@\n esumo()%0A\n+    \n %0A\n-\n     def \n@@ -1068,567 +1068,8 @@\n or%0A%0A\n-class Pix(Pagamento):%0A    def __init__(self, valor: float, descricao: str, chave: str, banco: str):%0A        super().__init__(valor, descricao)%0A        self.__chave: str = chave%0A        self.__banco: str = banco%0A%0A    def processar(self):%0A        if valor:%0A            self.valor%0A%0Aclass Boleto(Pagamento):%0A    def __init__(self, valor: float, descricao: str, codigo_barras: int, vencimento: str):%0A        super().__init__(valor, descricao)%0A        self.__codigo_barras: int = codigo_barras%0A        self.__vencimento: str = vencimento%0A%0A    def processar(self):%0A%0A\n def \n@@ -1222,28 +1222,24 @@\n processar()%0A\n-    \n     if isins\n@@ -1265,20 +1265,16 @@\n edito):%0A\n-    \n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2025-12-09_02-10-20",
+            "content": "from abc import ABC, abstractmethod\n\nclass Pagamento(ABC):\n    def __init__(self, valor: float, descricao: str):\n        self.valor: float = valor\n        self.descricao: str = descricao\n    \n    def resumo(self) -> str:\n        return f\"Pagamento de R$ {self.valor}: {self.descricao}\"\n    \n    def validar_valor(self) -> None:\n        if self.valor <= 0:\n            raise ValueError(\"falhou: valor invalido\")\n    \n    @abstractmethod\n    def processar(self):\n        pass\n    \nclass CartaoCredito(Pagamento): #acoplamento forte\n    def __init__(self, num: int, nome: str, limite: float, valor: float, descricao: str):\n        super().__init__(valor, descricao)\n        self.num: int = num\n        self.nome: str = nome\n        self.limite: float = limite\n\n    def resumo(self):\n        return \"Cartao de Credito: \" + super().resumo()\n\n    def get_limite(self):\n        return self.limite\n\n    def processar(self):\n        if self.valor > self.limite:\n            print(\"pagamento recusado por limite insuficiente\")\n            return\n        self.limite -= self.valor\n\nclass Pix(Pagamento):\n    def __init__(self, valor: float, descricao: str, chave: str, banco: str):\n        super().__init__(valor, descricao)\n        self.__chave: str = chave\n        self.__banco: str = banco\n\n    def processar(self):\n        if valor:\n            self.valor\n\nclass Boleto(Pagamento):\n    def __init__(self, valor: float, descricao: str, codigo_barras: int, vencimento: str):\n        super().__init__(valor, descricao)\n        self.__codigo_barras: int = codigo_barras\n        self.__vencimento: str = vencimento\n\n    def processar(self):\n\ndef processar_pagamentos(pagamentos: list[Pagamento]):\n    for pag in pagamentos:\n        pag.validar_valor()\n        print(pag.resumo())\n        pag.processar()\n        if isinstance(pag, CartaoCredito):\n            print(pag.get_limite())\n\npag: Pagamento = CartaoCredito(nome= \"David\", descricao=\"Coxinha\", limite=500.00, num=123, valor=0.50)\npagamentos: list[Pagamento] = [pag]\nprocessar_pagamentos(pagamentos)",
+            "lines": "66"
+        }
+    ]
+}
