@@ -1,0 +1,27 @@
+2025-12-10 02:14:26, MOVE, v:1, k:poo@pagamento, mode:PICK
+2025-12-10 02:14:27, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:14:28, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:16:11, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:65
+2025-12-10 02:16:14, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:19:58, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:67
+2025-12-10 02:20:00, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:23:46, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:68
+2025-12-10 02:30:26, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:32:23, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:32:25, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:32:26, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:32:34, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:39:39, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:39:39, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:39:41, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:39:42, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:39:43, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:45:27, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:70
+2025-12-10 02:45:28, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:45:29, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 02:45:42, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:70
+2025-12-10 02:45:44, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 03:00:51, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:71
+2025-12-10 03:00:52, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 03:01:17, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:71
+2025-12-10 03:01:18, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0

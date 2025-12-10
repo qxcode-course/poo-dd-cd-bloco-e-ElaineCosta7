@@ -42,8 +42,7 @@ class Pix(Pagamento):
         self.__banco: str = banco
 
     def processar(self):
-        if valor:
-            self.valor
+        print(f"Pix aprovado via banco {self.__banco}, chave {self.__chave}")
 
 class Boleto(Pagamento):
     def __init__(self, valor: float, descricao: str, codigo_barras: int, vencimento: str):
@@ -52,6 +51,8 @@ class Boleto(Pagamento):
         self.__vencimento: str = vencimento
 
     def processar(self):
+        print("boleto gerado. Aguardando pagamento...")
+        print(f"Código: {self.__codigo_barras} | Vencimento: {self.__vencimento}")
 
 def processar_pagamentos(pagamentos: list[Pagamento]):
     for pag in pagamentos:
@@ -61,6 +62,10 @@ def processar_pagamentos(pagamentos: list[Pagamento]):
         if isinstance(pag, CartaoCredito):
             print(pag.get_limite())
 
-pag: Pagamento = CartaoCredito(nome= "David", descricao="Coxinha", limite=500.00, num=123, valor=0.50)
-pagamentos: list[Pagamento] = [pag]
+
+pag1: Pagamento = CartaoCredito(nome= "David", descricao="Coxinha", limite=500.00, num=123, valor=0.50)
+pag2: Pagamento = Pix(valor=20.0, descricao="Compra no pix", chave="david@email", banco="Nubank")
+pag3: Pagamento = Boleto(valor=150.0, descricao="conta de luz", codigo_barras=18382, vencimento= "20/01/2026") 
+pagamentos: list[Pagamento] = [pag1, pag2, pag3]
+
 processar_pagamentos(pagamentos)
