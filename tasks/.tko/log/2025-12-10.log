@@ -25,3 +25,15 @@
 2025-12-10 03:00:52, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
 2025-12-10 03:01:17, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0, size:71
 2025-12-10 03:01:18, EXEC, v:1, k:poo@pagamento, mode:LOCK, rate:0
+2025-12-10 22:40:07, MOVE, v:1, k:poo@estacionamento, mode:PICK
+2025-12-10 22:40:08, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 22:40:08, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 22:40:09, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 22:40:11, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 22:40:12, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 23:00:02, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 23:04:45, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 23:09:29, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 23:27:38, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 23:37:05, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0
+2025-12-10 23:52:22, EXEC, v:1, k:poo@estacionamento, mode:FULL, rate:0

@@ -68,4 +68,4 @@ pag2: Pagamento = Pix(valor=20.0, descricao="Compra no pix", chave="david@email"
 pag3: Pagamento = Boleto(valor=150.0, descricao="conta de luz", codigo_barras=18382, vencimento= "20/01/2026") 
 pagamentos: list[Pagamento] = [pag1, pag2, pag3]
 
-processar_pagamentos(pagamentos)
+processar_pagamentos(pagamentos) 

@@ -107,8 +107,288 @@
         },
         {
             "label": "2025-12-09_19-46-12",
-            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, tipo: str):\n        self.__id: str = id\n        self.__tipo: str = tipo\n        self.__horaEntrada: int = 0\n\n    def getEntrada(self) -> int:\n        return self.__horaEntrada\n    def getTipo(self) -> str:\n        return self.__tipo\n    def getId(self) -> str:\n        return self.__id\n    \n    def setEntrada(self, horaEntrada: int) -> None:\n        self.__horaEntrada = horaEntrada\n\n    @abstractmethod\n    def calcularValor(self):\n        pass\n\n    def __str__(self) -> str:\n        return f\"{self.__id}:{self.__tipo}:{self.__horaEntrada}\"\n\nclass Bike(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id)\n\n    #def calcularValor(self, horaSaida: int) -> None:\n\nclass Moto(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id)\n\n    #def calcularValor(self, horaSaida: int) -> None:\n\nclass Carro(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id)\n\n    #def calcularValor(self, horaSaida: int) -> None:\n\nclass Estacionamento:\n    def __init__(self):\n        self.__veiculos: list[Veiculo] = []\n        self.__horaAtual: int = 0 \n\n    #def estacionar(self, veiculo: Veiculo) -> None:\n\n    #def pagar(self, id: str) -> None:\n\n    #def sair(self, id: str) -> None:\n\n    #def passarTempo(self, tempo: int) -> None:\n\n    #def __str__(self) -> str:\n\nveiculos: list[Veiculo] = [Bike()]\nfor veiculo in veiculos:\n    veiculo.calcularValor\n    print\n\n#def main():\n    \n#main()    ",
+            "content": "@@ -1388,203 +1388,124 @@\n r:%0A%0A\n-def main():%0A    estacionamento = Estacionamento()%0A    while True:%0A        args = input().split()%0A    if args%5B0%5D == %22end%22:%0A        break%0A    elif%0A    else:%0A        print(%22comando invalido%22)%0A\n+veiculos: list%5BVeiculo%5D = %5BBike()%5D%0Afor veiculo in veiculos:%0A    veiculo.calcularValor%0A    print%0A%0A#def main():\n %0A    %0A\n+#\n main\n",
             "lines": "66"
+        },
+        {
+            "label": "2025-12-11_02-30-29",
+            "content": "@@ -1434,17 +1434,16 @@\n mento()%0A\n-%0A\n     whil\n@@ -1481,20 +1481,16 @@\n split()%0A\n-    \n     if a\n@@ -1514,20 +1514,16 @@\n         \n-    \n break%0A  \n@@ -1528,74 +1528,13 @@\n     \n-  \n-  \n elif\n- args%5B0%5D == %22show%22:%0A            print(estacionamento)%0A    \n+%0A\n     \n@@ -1539,20 +1539,16 @@\n   else:%0A\n-    \n         \n",
+            "lines": "70"
+        },
+        {
+            "label": "2025-12-11_02-32-07",
+            "content": "@@ -1352,24 +1352,25 @@\n  None:%0A%0A    \n+#\n def __str__(\n@@ -1386,38 +1386,8 @@\n str:\n-%0A        return f%22Hora atual:%22\n %0A%0Ade\n",
+            "lines": "72"
+        },
+        {
+            "label": "2025-12-11_02-33-49",
+            "content": "@@ -1414,27 +1414,8 @@\n ual:\n- %7Bself.__horaAtual%7D\n %22%0A%0Ad\n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-11_02-34-27",
+            "content": "@@ -1503,62 +1503,8 @@\n ue:%0A\n-        line: str = input()%0A        print(%22$%22 + line)%0A\n     \n",
+            "lines": "73"
+        },
+        {
+            "label": "2025-12-11_02-36-29",
+            "content": "@@ -1572,34 +1572,22 @@\n s = \n-list%5Bstr%5D = line\n+input()\n .split(\n-%22 %22\n )%0A  \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-12-11_02-37-47",
+            "content": "@@ -1567,16 +1567,28 @@\n   args =\n+ list%5Bstr%5D =\n  line.sp\n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-12-11_02-39-32",
+            "content": "@@ -1170,24 +1170,25 @@\n t = 0 %0A%0A    \n+#\n def estacion\n@@ -1701,156 +1701,8 @@\n to)%0A\n-        elif args%5B0%5D == %22tempo%22:%0A        elif args%5B0%5D == %22estacionar%22:%0A            ve%C3%ADculo = args%5B1%5D%0A            estacionamento.estacionar(ve%C3%ADculo)%0A\n     \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-12-11_02-43-56",
+            "content": "@@ -711,18 +711,10 @@\n _(id\n-, %22bike%22\n )%0A\n+\n %0A   \n@@ -850,16 +850,8 @@\n _(id\n-, %22moto%22\n )%0A%0A \n@@ -951,32 +951,32 @@\n self, id: str):%0A\n+\n         super().\n@@ -990,17 +990,8 @@\n _(id\n-, %22carro%22\n )%0A%0A \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-12-11_02-45-27",
+            "content": "@@ -1250,93 +1250,8 @@\n one:\n-%0A        veiculo.setEntrada(self.__horaAtual)%0A        self.__veiculos.append(veiculo)\n %0A%0A  \n",
+            "lines": "79"
+        },
+        {
+            "label": "2025-12-11_02-47-33",
+            "content": "@@ -1412,24 +1412,25 @@\n  None:%0A%0A    \n+#\n def passarTe\n@@ -1463,42 +1463,8 @@\n one:\n-%0A        self.__horaAtual += tempo\n %0A%0A  \n@@ -1843,82 +1843,8 @@\n o%22:%0A\n-            tempo = args%5B1%5D%0A            estacionamento.passarTempo(tempo)%0A\n     \n",
+            "lines": "81"
+        },
+        {
+            "label": "2025-12-11_02-48-40",
+            "content": "@@ -1896,20 +1896,15 @@\n o = \n-int(\n args%5B1%5D\n-)\n %0A   \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-12-11_02-49-09",
+            "content": "@@ -2001,19 +2001,22 @@\n         \n-tip\n+ve%C3%ADcul\n o = args\n@@ -2023,69 +2023,8 @@\n %5B1%5D%0A\n-            id = args%5B2%5D%0A%0A            if tipo == %22bike%22:%0A    \n     \n@@ -2061,16 +2061,15 @@\n nar(\n-bike(id)\n+ve%C3%ADculo\n )%0A  \n",
+            "lines": "84"
+        },
+        {
+            "label": "2025-12-11_02-52-13",
+            "content": "@@ -710,17 +710,17 @@\n __(id, %22\n-B\n+b\n ike%22)%0A%0A \n@@ -2066,17 +2066,17 @@\n ipo == %22\n-B\n+b\n ike%22:%0A  \n@@ -2115,17 +2115,17 @@\n acionar(\n-B\n+b\n ike(id))\n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-12-11_02-52-45",
+            "content": "@@ -2129,176 +2129,8 @@\n d))%0A\n-            if tipo == %22Moto%22:%0A                estacionamento.estacionar(Moto(id))%0A            if tipo == %22carro%22:%0A                estacionamento.estacionar(Carro(id))%0A\n     \n",
+            "lines": "87"
+        },
+        {
+            "label": "2025-12-11_02-53-56",
+            "content": "@@ -2041,16 +2041,17 @@\n args%5B2%5D%0A\n+%0A\n         \n",
+            "lines": "91"
+        },
+        {
+            "label": "2025-12-11_02-54-15",
+            "content": "@@ -1005,17 +1005,17 @@\n __(id, %22\n-C\n+c\n arro%22)%0A%0A\n@@ -2065,17 +2065,17 @@\n ipo == %22\n-b\n+B\n ike%22:%0A  \n@@ -2148,17 +2148,17 @@\n ipo == %22\n-m\n+M\n oto%22:%0A  \n@@ -2281,17 +2281,17 @@\n acionar(\n-c\n+C\n arro(id)\n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-12-11_02-57-02",
+            "content": "@@ -1005,17 +1005,17 @@\n __(id, %22\n-c\n+C\n arro%22)%0A%0A\n@@ -2148,17 +2148,17 @@\n ipo == %22\n-M\n+m\n oto%22:%0A  \n@@ -2231,17 +2231,17 @@\n ipo == %22\n-C\n+c\n arro%22:%0A \n@@ -2281,17 +2281,17 @@\n acionar(\n-C\n+c\n arro(id)\n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-12-11_02-57-31",
+            "content": "@@ -2065,17 +2065,17 @@\n ipo == %22\n-B\n+b\n ike%22:%0A  \n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-12-11_02-57-47",
+            "content": "@@ -1536,216 +1536,14 @@\n     \n-sa%C3%ADda = %22%22%0A        for v in self.__veiculos:%0A            tipo = v.getTipo()%0A            id = v.getId()%0A            hora = v.getEntrada()%0A            sa%C3%ADda += f%22_____%7Btipo%7D :____%7Bid%7D : %7Bhora%7D%22%0A        sa%C3%ADda +=\n+return\n  f%22H\n@@ -1576,29 +1576,8 @@\n al%7D%22\n-%0A        return sa%C3%ADda\n %0A%0Ade\n",
+            "lines": "90"
+        },
+        {
+            "label": "2025-12-11_03-03-07",
+            "content": "@@ -1726,10 +1726,8 @@\n ora%7D\n-%5Cn\n %22%0A  \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-03-28",
+            "content": "@@ -1726,36 +1726,32 @@\n ora%7D%5Cn%22%0A        \n-    \n sa%C3%ADda += f%22Hora \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-03-43",
+            "content": "@@ -1726,32 +1726,36 @@\n ora%7D%5Cn%22%0A        \n+    \n sa%C3%ADda += f%22Hora \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-04-12",
+            "content": "@@ -2244,16 +2244,8 @@\n s%5B1%5D\n-.lower()\n %0A   \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-08-56",
+            "content": "@@ -585,20 +585,18 @@\n %7Bself.__\n-tipo\n+id\n %7D:%7Bself.\n@@ -589,34 +589,36 @@\n f.__id%7D:%7Bself.__\n-id\n+tipo\n %7D:%7Bself.__horaEn\n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-11-30",
+            "content": "@@ -2298,17 +2298,17 @@\n ipo == %22\n-b\n+B\n ike%22:%0A  \n@@ -2381,17 +2381,17 @@\n ipo == %22\n-m\n+M\n oto%22:%0A  \n@@ -2464,17 +2464,17 @@\n ipo == %22\n-c\n+C\n arro%22:%0A \n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-30-19",
+            "content": "@@ -517,27 +517,11 @@\n self\n-, horaSaida: int\n ):%0A\n+\n     \n@@ -714,32 +714,33 @@\n d, %22Bike%22)%0A%0A    \n+#\n def calcularValo\n@@ -771,33 +771,16 @@\n -%3E None:\n-%0A        return 0\n %0A%0Aclass \n@@ -861,32 +861,33 @@\n d, %22moto%22)%0A%0A    \n+#\n def calcularValo\n@@ -918,33 +918,16 @@\n -%3E None:\n-%0A        return 0\n %0A%0Aclass \n@@ -1014,24 +1014,25 @@\n arro%22)%0A%0A    \n+#\n def calcular\n@@ -1071,25 +1071,8 @@\n one:\n-%0A        return 0\n %0A%0Acl\n",
+            "lines": "97"
+        },
+        {
+            "label": "2025-12-11_03-32-49",
+            "content": "@@ -1761,17 +1761,16 @@\n  f%22_____\n-_\n %7Btipo%7D :\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-11_03-33-04",
+            "content": "@@ -1773,16 +1773,17 @@\n po%7D :___\n+_\n %7Bid%7D : %7B\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-11_03-33-09",
+            "content": "@@ -1770,17 +1770,16 @@\n %7Btipo%7D :\n- \n ___%7Bid%7D \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-11_03-33-17",
+            "content": "@@ -1774,18 +1774,16 @@\n o%7D : ___\n-__\n %7Bid%7D : %7B\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-11_03-33-28",
+            "content": "@@ -889,17 +889,17 @@\n __(id, %22\n-M\n+m\n oto%22)%0A%0A \n@@ -1053,17 +1053,17 @@\n __(id, %22\n-C\n+c\n arro%22)%0A%0A\n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-11_03-35-09",
+            "content": "@@ -1737,213 +1737,54 @@\n a()%0A\n-%0A            tipo_mask = %22_%22 * (6 - len(tipo)) + tipo if len(tipo) %3C 6 else tipo%0A            id_mask = %22_%22 * (5 - len(id)) + id if len(id) %3C 5 else id%0A        %0A            sa%C3%ADda += f%22%7Btipo_mask%7D : %7Bid_mask\n+            sa%C3%ADda += f%22______%7Btipo%7D : _____%7Bid\n %7D : \n",
+            "lines": "100"
+        },
+        {
+            "label": "2025-12-11_03-43-55",
+            "content": "@@ -1762,19 +1762,22 @@\n k = \n-(\n %22_%22 * \n+(\n 6 \n-+ \n+- len\n (tip\n@@ -1840,19 +1840,22 @@\n k = \n-(\n %22_%22 * \n+(\n 5 \n-+ \n+- len\n (id)\n@@ -1870,25 +1870,25 @@\n f len(id) %3C \n-6\n+5\n  else id%0A   \n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-12-11_03-49-52",
+            "content": "@@ -1776,16 +1776,23 @@\n  (tipo))\n+ + tipo\n  if len(\n@@ -1849,16 +1849,21 @@\n  + (id))\n+ + id\n  if len(\n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-12-11_03-51-21",
+            "content": "@@ -1761,112 +1761,8 @@\n sk =\n- %22_%22 * (10 - len(tipo)) + tipo%0A            id_mask = %22_%22 * (10 - len(id)) + id%0A%0A            #tipo_mask =\n  (%22_\n@@ -1816,17 +1816,16 @@\n         \n-#\n id_mask \n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-12-11_03-54-01",
+            "content": "@@ -1835,16 +1835,151 @@\n d)) + id\n+%0A%0A            #tipo_mask = (%22_%22 * 6 + (tipo)) if len(tipo) %3C 6 else tipo%0A            #id_mask = (%22_%22 * 5 + (id)) if len(id) %3C 6 else id\n %0A       \n",
+            "lines": "107"
+        },
+        {
+            "label": "2025-12-11_03-54-13",
+            "content": "@@ -1397,24 +1397,25 @@\n iculo)%0A%0A    \n+#\n def pagar(se\n@@ -1435,25 +1435,16 @@\n -%3E None:\n-%0A        \n %0A%0A    #d\n@@ -2707,108 +2707,8 @@\n d))%0A\n-        elif args%5B0%5D == %22pagar%22:%0A            id = int(args%5B1%5D)%0A            estacionamento.pagar(id)%0A\n     \n",
+            "lines": "104"
+        },
+        {
+            "label": "2025-12-11_04-05-09",
+            "content": "@@ -1447,206 +1447,8 @@\n     \n-for v in self.__veiculos:%0A            if v.getId() ==  id:%0A                entrada = v.getEntrada()%0A                saida = self.__horaAtual%0A                tempo = saida - entrada%0A%0A                \n %0A%0A  \n",
+            "lines": "108"
+        },
+        {
+            "label": "2025-12-11_04-06-22",
+            "content": "@@ -1645,253 +1645,8 @@\n     \n-if v.getTipo() == %22Bike%22:%0A                    valor = tempo * 0.015%0A                elif v.getTipo() == %22Moto%22:%0A                    valor = tempo * 0.05%0A%0A                print(f%22%7Bv.getTipo()%7D chegou %7Bentrada%7D saiu %7Bsaida%7D. pagar R$ %7Bvalor:.2f%7D%22)\n %0A%0A  \n",
+            "lines": "114"
+        },
+        {
+            "label": "2025-12-11_04-08-57",
+            "content": "@@ -3204,23 +3204,28 @@\n    id = \n+int(\n args%5B1%5D\n+)\n %0A       \n",
+            "lines": "119"
+        },
+        {
+            "label": "2025-12-11_04-09-19",
+            "content": "@@ -1797,94 +1797,8 @@\n 0.05\n-%0A                elif v.getTipo() == %22Carro%22:%0A                    valor = tempo * 0.10\n %0A%0A  \n",
+            "lines": "119"
+        },
+        {
+            "label": "2025-12-11_04-10-18",
+            "content": "@@ -1954,9 +1954,9 @@\n a%7D. \n-P\n+p\n agar\n",
+            "lines": "121"
+        },
+        {
+            "label": "2025-12-11_04-10-39",
+            "content": "@@ -1878,17 +1878,17 @@\n po * 0.1\n-5\n+0\n %0A%0A      \n",
+            "lines": "121"
+        },
+        {
+            "label": "2025-12-11_04-12-09",
+            "content": "@@ -1976,73 +1976,8 @@\n f%7D%22)\n-%0A                self.__veiculos.remove(v)%0A                return\n %0A%0A  \n",
+            "lines": "121"
+        },
+        {
+            "label": "2025-12-11_04-13-20",
+            "content": "@@ -799,74 +799,16 @@\n     \n-tempo = horaSaida - self.getEntrada()%0A        return * tempo 0.015\n+return 0\n %0A%0Acl\n",
+            "lines": "123"
+        },
+        {
+            "label": "2025-12-11_04-14-25",
+            "content": "@@ -1658,21 +1658,21 @@\n         \n-valor\n+tempo\n  = saida\n@@ -1699,17 +1699,16 @@\n         \n-#\n if v.get\n@@ -1744,17 +1744,16 @@\n         \n-#\n  valor =\n@@ -1775,33 +1775,32 @@\n                 \n-#\n elif v.getTipo()\n@@ -1823,33 +1823,32 @@\n                 \n-#\n valor = tempo * \n@@ -1868,17 +1868,16 @@\n         \n-#\n elif v.g\n@@ -1917,17 +1917,16 @@\n         \n-#\n valor = \n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-12-11_04-15-12",
+            "content": "@@ -847,24 +847,24 @@\n   return\n+ *\n  tempo\n- *\n  0.015%0A%0A\n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-12-11_04-15-52",
+            "content": "@@ -2029,16 +2029,20 @@\n $ %7Bvalor\n+:.2f\n %7D%22)%0A    \n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-12-11_04-16-57",
+            "content": "@@ -1670,30 +1670,23 @@\n r = \n-v.calcularValor(sai\n+saida - entra\n da\n-)\n %0A%0A  \n@@ -2033,14 +2033,52 @@\n alor\n-:.2f%7D%22\n+%7D%22)%0A                self.__veiculos.remove(v\n )%0A  \n",
+            "lines": "124"
+        },
+        {
+            "label": "2025-12-11_04-19-09",
+            "content": "@@ -773,37 +773,36 @@\n aSaida: int) -%3E \n-float\n+None\n :%0A        tempo \n@@ -1006,60 +1006,13 @@\n  -%3E \n-float:%0A        tempo = horaSaida - self.getEntrada()\n+None:\n %0A   \n@@ -1019,36 +1019,25 @@\n      return \n-tempo * 0.05\n+0\n %0A%0Aclass Carr\n@@ -1177,54 +1177,8 @@\n ne:%0A\n-        tempo = horaSaida - self.getEntrada()%0A\n     \n@@ -1188,28 +1188,17 @@\n  return \n-tempo * 0.05\n+0\n %0A%0Aclass \n",
+            "lines": "123"
+        },
+        {
+            "label": "2025-12-11_04-21-06",
+            "content": "@@ -1218,37 +1218,36 @@\n aSaida: int) -%3E \n-float\n+None\n :%0A        tempo \n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-11_04-21-17",
+            "content": "@@ -1218,36 +1218,37 @@\n aSaida: int) -%3E \n-None\n+float\n :%0A        tempo \n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-11_04-21-34",
+            "content": "@@ -995,36 +995,37 @@\n aSaida: int) -%3E \n-None\n+float\n :%0A        tempo \n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-11_04-21-51",
+            "content": "@@ -773,36 +773,37 @@\n aSaida: int) -%3E \n-None\n+float\n :%0A        tempo \n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-11_04-22-03",
+            "content": "@@ -1284,23 +1284,22 @@\n         \n-valor =\n+return\n  tempo *\n@@ -1305,75 +1305,10 @@\n * 0.\n-10%0A        if valor %3C 5:%0A            valor = 5%0A        return valor\n+05\n %0A%0Acl\n",
+            "lines": "125"
+        },
+        {
+            "label": "2025-12-11_04-23-10",
+            "content": "from abc import ABC, abstractmethod\n\nclass Veiculo(ABC):\n    def __init__(self, id: str, tipo: str):\n        self.__id: str = id\n        self.__tipo: str = tipo\n        self.__horaEntrada: int = 0\n\n    def getEntrada(self) -> int:\n        return self.__horaEntrada\n    def getTipo(self) -> str:\n        return self.__tipo\n    def getId(self) -> str:\n        return self.__id\n    \n    def setEntrada(self, horaEntrada: int) -> None:\n        self.__horaEntrada = horaEntrada\n\n    @abstractmethod\n    def calcularValor(self, horaSaida: int):\n        pass\n\n    def __str__(self) -> str:\n        return f\"{self.__tipo}:{self.__id}:{self.__horaEntrada}\"\n\nclass Bike(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Bike\")\n\n    def calcularValor(self, horaSaida: int) -> None:\n        tempo = horaSaida - self.getEntrada()\n        return tempo * 0.015\n\nclass Moto(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Moto\")\n\n    def calcularValor(self, horaSaida: int) -> None:\n        tempo = horaSaida - self.getEntrada()\n        return tempo * 0.05\n\nclass Carro(Veiculo):\n    def __init__(self, id: str):\n        super().__init__(id, \"Carro\")\n\n    def calcularValor(self, horaSaida: int) -> None:\n        tempo = horaSaida - self.getEntrada()\n        valor = tempo * 0.10\n        if valor < 5:\n            valor = 5\n        return valor\n\nclass Estacionamento:\n    def __init__(self):\n        self.__veiculos: list[Veiculo] = []\n        self.__horaAtual: int = 0 \n\n    def estacionar(self, veiculo: Veiculo) -> None:\n        veiculo.setEntrada(self.__horaAtual)\n        self.__veiculos.append(veiculo)\n\n    def pagar(self, id: str) -> None:\n        for v in self.__veiculos:\n            if v.getId() ==  id:\n                entrada = v.getEntrada()\n                saida = self.__horaAtual\n                valor = v.calcularValor(saida)\n\n                #if v.getTipo() == \"Bike\":\n                   # valor = tempo * 0.015\n                #elif v.getTipo() == \"Moto\":\n                    #valor = tempo * 0.05\n                #elif v.getTipo() == \"Carro\":\n                    #valor = tempo * 0.15\n\n                print(f\"{v.getTipo()} chegou {entrada} saiu {saida}. Pagar R$ {valor:.2f}\")\n                return\n\n    #def sair(self, id: str) -> None:\n\n    def passarTempo(self, tempo: int) -> None:\n        self.__horaAtual += tempo\n\n    def __str__(self) -> str:\n        sa\u00edda = \"\"\n        for v in self.__veiculos:\n            tipo = v.getTipo()\n            id = v.getId()\n            hora = v.getEntrada()\n\n            tipo_mask = \"_\" * (10 - len(tipo)) + tipo\n            id_mask = \"_\" * (10 - len(id)) + id\n        \n            sa\u00edda += f\"{tipo_mask} : {id_mask} : {hora}\\n\"\n        sa\u00edda += f\"Hora atual: {self.__horaAtual}\"\n        return sa\u00edda\n\ndef main():\n    estacionamento = Estacionamento()\n\n    while True:\n        line: str = input()\n        print(\"$\" + line)\n        args = line.split(\" \")\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"show\":\n            print(estacionamento)\n        elif args[0] == \"tempo\":\n            tempo = int(args[1])\n            estacionamento.passarTempo(tempo)\n        elif args[0] == \"estacionar\":\n            tipo = args[1].lower()\n            id = args[2]\n            if tipo == \"bike\":\n                estacionamento.estacionar(Bike(id))\n            if tipo == \"moto\":\n                estacionamento.estacionar(Moto(id))\n            if tipo == \"carro\":\n                estacionamento.estacionar(Carro(id))\n        elif args[0] == \"pagar\":\n            id = args[1]\n            estacionamento.pagar(id)\n        else:\n            print(\"comando invalido\")\n\n    \nmain()    ",
+            "lines": "128"
         }
     ]
 }
